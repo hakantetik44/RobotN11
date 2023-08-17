@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230817 20:34:25.776" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCasesN11" source="C:\Users\maruf\IdeaProjects\e2e_N11\tests\TestCasesN11.robot">
+<test id="s1-t1" name="N11 login" line="7">
+<kw name="N11 Anasayfaya Git" library="N11Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${DataN11.UrlN11}</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230817 20:34:25.921" level="INFO">Opening browser 'firefox' to base url 'https://www.n11.com/'.</msg>
+<msg timestamp="20230817 20:34:25.925" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230817 20:34:25.921" endtime="20230817 20:34:31.725"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230817 20:34:31.725" endtime="20230817 20:34:31.986"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230817 20:34:31.987" endtime="20230817 20:34:32.004"/>
+</kw>
+<status status="PASS" starttime="20230817 20:34:25.921" endtime="20230817 20:34:32.004"/>
+</kw>
+<kw name="N11 Giris Yap" library="N11Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Girip_yap}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230817 20:34:32.008" level="INFO">Clicking element '//a[@title='Giriş Yap']'.</msg>
+<status status="PASS" starttime="20230817 20:34:32.006" endtime="20230817 20:34:33.174"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${N11Locators.Email_yeri}</arg>
+<arg>${DataN11.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230817 20:34:33.177" level="INFO">Typing text 'teslarobot990@gmail.com' into text field 'css=#email'.</msg>
+<status status="PASS" starttime="20230817 20:34:33.175" endtime="20230817 20:34:33.305"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${N11Locators.Sifre_yeri}</arg>
+<arg>${DataN11.SIFRE}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230817 20:34:33.308" level="INFO">Typing password into text field 'css=#password'.</msg>
+<msg timestamp="20230817 20:34:33.375" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230817 20:34:33.403" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230817 20:34:33.306" endtime="20230817 20:34:33.403"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Login_butonu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230817 20:34:33.405" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230817 20:34:33.403" endtime="20230817 20:34:38.724"/>
+</kw>
+<status status="PASS" starttime="20230817 20:34:32.004" endtime="20230817 20:34:38.725"/>
+</kw>
+<status status="PASS" starttime="20230817 20:34:25.919" endtime="20230817 20:34:38.725"/>
+</test>
+<test id="s1-t2" name="Urun sepete ekleme" line="11">
+<kw name="Ürün Arama" library="N11Page">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${N11Locators.Arama_yeri}</arg>
+<arg>${DataN11.ARANACAK_KELIME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230817 20:34:38.730" level="INFO">Typing text 'Dupont 16186 Murder Çakmak ' into text field 'xpath=//input[@id='searchData']'.</msg>
+<status status="PASS" starttime="20230817 20:34:38.728" endtime="20230817 20:34:38.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Arama_Butonu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230817 20:34:38.826" level="INFO">Clicking element 'css=.iconsSearch'.</msg>
+<msg timestamp="20230817 20:34:38.961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230817 20:34:38.962" level="FAIL">ElementClickInterceptedException: Message: Element &lt;span class="iconsSearch"&gt; is not clickable at point (1117,40) because another element &lt;p class="dn-slide-message"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:187:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:331:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:162:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:121:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:86:31
+</msg>
+<status status="FAIL" starttime="20230817 20:34:38.825" endtime="20230817 20:34:38.968"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${DataN11.Expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20230817 20:34:38.968" endtime="20230817 20:34:38.969"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Sepete_ekle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230817 20:34:38.970" endtime="20230817 20:34:38.971"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${N11Locators.Sepet_butonu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230817 20:34:38.971" endtime="20230817 20:34:38.971"/>
+</kw>
+<status status="FAIL" starttime="20230817 20:34:38.727" endtime="20230817 20:34:38.971"/>
+</kw>
+<status status="FAIL" starttime="20230817 20:34:38.726" endtime="20230817 20:34:38.972">ElementClickInterceptedException: Message: Element &lt;span class="iconsSearch"&gt; is not clickable at point (1117,40) because another element &lt;p class="dn-slide-message"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:187:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:331:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:162:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:121:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:86:31
+</status>
+</test>
+<status status="FAIL" starttime="20230817 20:34:25.778" endtime="20230817 20:34:38.973"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="TestCasesN11">TestCasesN11</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
